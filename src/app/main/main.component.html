@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid mb-0 p-5 " style="background-color:  rgb(238, 228, 228); border-bottom: 2px solid black">
+  <div class="container">
+    <h3 class="display-3">Welcome to Contact List</h3>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 ">
+<app-users
+   [updateContactIndex] = "updateContactIndex"> 
+</app-users>
+    </div>
+    <div class="col-md-12">
+      
+<app-display 
+    (updateContactIndex)='updateContactIndex = $event'>
+
+</app-display>
+
+    </div>
+  </div>
+</div>

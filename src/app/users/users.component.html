@@ -1,0 +1,23 @@
+<div class="container border mt-5 p-5 text-light" style="margin-left: 275px; width: 600px">
+
+  
+        <h4 class="text-center">Add Contact</h4>
+      <div [formGroup]='usersForm'> 
+        <div class="form-group text-light">
+          <label for="name" >Name</label>
+          <input type="text" class="form-control" formControlName="name" id="name" placeholder="Name">
+          <span class='help-block' *ngIf='!usersForm.get("name").valid && usersForm.get("name").touched'>Please input name!</span> 
+        </div>
+        <div class="form-group">
+          <label for="emailadd" >Email Address</label>
+          <input type="email" class="form-control" formControlName="email" id="emailadd" placeholder="Email Address">
+          <span class='help-block' *ngIf='!usersForm.get("email").valid && usersForm.get("email").touched'>Please input valid Email Address!</span> 
+        </div>
+        <div class="form-group">
+            <label for="contact" >Contacts</label>
+            <input type="text" class="form-control" formControlName="phone" id="contact" placeholder="Phone No.">
+            <span class='help-block' *ngIf='!usersForm.get("phone").valid && usersForm.get("phone").touched'>Please input contact number!</span> 
+          </div>
+        <button type="submit" class="btn btn-primary"(click)="onSubmit()"> {{updateMode === false ? "add": "update"}} </button>
+        </div>
+</div>
